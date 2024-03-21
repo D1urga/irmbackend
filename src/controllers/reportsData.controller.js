@@ -226,6 +226,7 @@ const posttypeb = asyncHandler(async (req, res) => {
     reportSection,
     assessmentLossFields,
     assessmentLossNotes,
+    
   } = req.body;
   console.log(assessmentLossNotes);
   let path1 = "";
