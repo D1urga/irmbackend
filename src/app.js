@@ -22,7 +22,9 @@ app.get("/api", (req, res) => {
 });
 
 import reportDataRouter from "./routes/reportsData.route.js";
+import updateRouter from "./routes/reportUpdate.route.js";
 
 app.use("/api/v1/reports", reportDataRouter);
+app.use("/api/v1/update", updateRouter);
 
 export { app };
