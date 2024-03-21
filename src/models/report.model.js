@@ -83,13 +83,23 @@ const ReportsDataSchema = new mongoose.Schema(
       },
     ],
 
+    conclusionTable: [
+      {
+        title: String,
+        attachmentUrl: String,
+        attachmentImage: String,
+      },
+    ],
+
     assessmentLossFields: [
       {
         name: String,
       },
     ],
+    conclusionDes: [{ conclusionDes: String }],
 
     obsvrf: [{ imgurl: String }],
+    contable: [{ imgurl: String }],
   },
   { timestamps: true },
 );
