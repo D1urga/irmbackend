@@ -124,16 +124,47 @@ const postReport = asyncHandler(async (req, res) => {
   let url18 = await uploadOnCloudinary(path18);
   let url19 = await uploadOnCloudinary(path19);
   let url20 = await uploadOnCloudinary(path20);
-  // for (let i = 0; i < observationsAndVerificationsAttach.length; i++) {
-  //   const obj = {
-  //     description: "dasdas",
-  //     title: "adasd",
-  //     attachmentUrl:
-  //       "blob:http://localhost:3001/b24977e2-8afa-4236-b4e6-5e11166f3630",
-  //     attachmentImage: "",
-  //     _id: "65faea729554fc96abc4e26a",
-  //   };
-  // }
+
+  const urlVar1 =
+    (url1?.url || "").slice(0, 4) + "s" + (url1?.url || "").slice(4);
+  const urlVar2 =
+    (url2?.url || "").slice(0, 4) + "s" + (url2?.url || "").slice(4);
+  const urlVar3 =
+    (url3?.url || "").slice(0, 4) + "s" + (url3?.url || "").slice(4);
+  const urlVar4 =
+    (url4?.url || "").slice(0, 4) + "s" + (url4?.url || "").slice(4);
+  const urlVar5 =
+    (url5?.url || "").slice(0, 4) + "s" + (url5?.url || "").slice(4);
+  const urlVar6 =
+    (url6?.url || "").slice(0, 4) + "s" + (url6?.url || "").slice(4);
+  const urlVar7 =
+    (url7?.url || "").slice(0, 4) + "s" + (url7?.url || "").slice(4);
+  const urlVar8 =
+    (url8?.url || "").slice(0, 4) + "s" + (url8?.url || "").slice(4);
+  const urlVar9 =
+    (url9?.url || "").slice(0, 4) + "s" + (url9?.url || "").slice(4);
+  const urlVar10 =
+    (url10?.url || "").slice(0, 4) + "s" + (url10?.url || "").slice(4);
+  const urlVar11 =
+    (url11?.url || "").slice(0, 4) + "s" + (url11?.url || "").slice(4);
+  const urlVar12 =
+    (url12?.url || "").slice(0, 4) + "s" + (url12?.url || "").slice(4);
+  const urlVar13 =
+    (url13?.url || "").slice(0, 4) + "s" + (url13?.url || "").slice(4);
+  const urlVar14 =
+    (url14?.url || "").slice(0, 4) + "s" + (url14?.url || "").slice(4);
+  const urlVar15 =
+    (url5?.url || "").slice(0, 4) + "s" + (url15?.url || "").slice(4);
+  const urlVar16 =
+    (url6?.url || "").slice(0, 4) + "s" + (url16?.url || "").slice(4);
+  const urlVar17 =
+    (url17?.url || "").slice(0, 4) + "s" + (url17?.url || "").slice(4);
+  const urlVar18 =
+    (url18?.url || "").slice(0, 4) + "s" + (url18?.url || "").slice(4);
+  const urlVar19 =
+    (url19?.url || "").slice(0, 4) + "s" + (url19?.url || "").slice(4);
+  const urlVar20 =
+    (url20?.url || "").slice(0, 4) + "s" + (url20?.url || "").slice(4);
   const list = [];
   let count = 1;
   const list2 = [];
@@ -176,28 +207,28 @@ const postReport = asyncHandler(async (req, res) => {
     ),
     conclusionTable: JSON.parse(conclusionTable),
     obsvrf: [
-      { imgurl: url1?.url || "" },
-      { imgurl: url2?.url || "" },
-      { imgurl: url3?.url || "" },
-      { imgurl: url4?.url || "" },
-      { imgurl: url5?.url || "" },
-      { imgurl: url6?.url || "" },
-      { imgurl: url7?.url || "" },
-      { imgurl: url8?.url || "" },
-      { imgurl: url9?.url || "" },
-      { imgurl: url10?.url || "" },
+      { imgurl: urlVar1 || "" },
+      { imgurl: urlVar2 || "" },
+      { imgurl: urlVar3 || "" },
+      { imgurl: urlVar4 || "" },
+      { imgurl: urlVar5 || "" },
+      { imgurl: urlVar6 || "" },
+      { imgurl: urlVar7 || "" },
+      { imgurl: urlVar8 || "" },
+      { imgurl: urlVar9 || "" },
+      { imgurl: urlVar10 || "" },
     ],
     contable: [
-      { imgurl: url11?.url || "" },
-      { imgurl: url12?.url || "" },
-      { imgurl: url13?.url || "" },
-      { imgurl: url14?.url || "" },
-      { imgurl: url15?.url || "" },
-      { imgurl: url16?.url || "" },
-      { imgurl: url17?.url || "" },
-      { imgurl: url18?.url || "" },
-      { imgurl: url19?.url || "" },
-      { imgurl: url20?.url || "" },
+      { imgurl: urlVar11 || "" },
+      { imgurl: urlVar12 || "" },
+      { imgurl: urlVar13 || "" },
+      { imgurl: urlVar14 || "" },
+      { imgurl: urlVar15 || "" },
+      { imgurl: urlVar16 || "" },
+      { imgurl: urlVar17 || "" },
+      { imgurl: urlVar18 || "" },
+      { imgurl: urlVar19 || "" },
+      { imgurl: urlVar20 || "" },
     ],
   });
   return res
@@ -226,7 +257,6 @@ const posttypeb = asyncHandler(async (req, res) => {
     reportSection,
     assessmentLossFields,
     assessmentLossNotes,
-    
   } = req.body;
   console.log(assessmentLossNotes);
   let path1 = "";
