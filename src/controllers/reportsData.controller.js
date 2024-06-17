@@ -5,6 +5,7 @@ import { uploadOnCloudinary } from "../utils/cloudinary.js";
 import { ApiError } from "../utils/apiError.js";
 import { parse } from "dotenv";
 import { TypeBReport } from "../models/typeb.model.js";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const postReport = asyncHandler(async (req, res) => {
   const {
@@ -309,6 +310,21 @@ const getIndivisualReportTypeB = asyncHandler(async (req, res) => {
     .status(200)
     .json(new ApiResponse(200, data, "data post succesffully"));
 });
+
+const generateData = asyncHandler(async (req, res) => {
+  const { input } = req.body;
+  const genAI = new GoogleGenerativeAI(
+    "AIzaSyCPPW9GPz4OrkBVSIS5DoZgb62b5Q3Nji4",
+  );
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const prompt =
+    "i am anoop kumar a coder developer and investor 5 times hackathon winner write a detailed summary on me ";
+  const result = await model.generateContent(input);
+  const response = await result.response;
+  const text = response.text();
+  console.log(text);
+  return res.status(200).json(new ApiResponse(200, text, "working properly"));
+});
 export {
   postReport,
   getReport,
@@ -316,4 +332,5 @@ export {
   posttypeb,
   getIndivisualReportTypeB,
   getReportTypeB,
+  generateData,
 };

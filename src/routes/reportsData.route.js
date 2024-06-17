@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { upload } from "../middlewares/multer.middlewares.js";
 import {
+  generateData,
   getIndivisualReport,
   getIndivisualReportTypeB,
   getReport,
@@ -56,5 +57,6 @@ router.route("/getReport").get(getReport);
 router.route("/getReportTypeB").get(getReportTypeB);
 router.route("/getIndivisualReport/:id").get(getIndivisualReport);
 router.route("/getIndivisualReportTypeB/:id").get(getIndivisualReportTypeB);
+router.route("/generate").post(generateData);
 
 export default router;
