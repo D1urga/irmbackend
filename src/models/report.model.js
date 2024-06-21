@@ -82,6 +82,14 @@ const ReportsDataSchema = new mongoose.Schema(
         attachmentImage: String,
       },
     ],
+    excelAttachment: [
+      {
+        description: String,
+        title: String,
+        attachmentUrl: String,
+        attachmentImage: String,
+      },
+    ],
 
     conclusionTable: [
       {
@@ -100,6 +108,7 @@ const ReportsDataSchema = new mongoose.Schema(
 
     obsvrf: [{ imgurl: String }],
     contable: [{ imgurl: String }],
+    excelAttach: [{ imgurl: String }],
   },
   { timestamps: true },
 );

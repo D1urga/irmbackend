@@ -35,7 +35,7 @@ const updateTypeA = asyncHandler(async (req, res) => {
         assessmentLossTable: JSON.parse(assessmentLossTable),
         assessmentLossFields: JSON.parse(assessmentLossFields),
         policyParticularsFields: JSON.parse(policyParticularsFields),
-        // observationsAndVerificationsAttach,
+        // observationsAndVerificationsAttach: JSON.parse(observationsAndVerificationsAttach),
         assessmentLossNotes: JSON.parse(assessmentLossNotes),
         assessmentLossDes: JSON.parse(assessmentLossDes),
         // conclusionTable,
